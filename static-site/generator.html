@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Генератор BaseOf — логотип, палитра и обложка</title>
+  <meta name="description" content="Заполните короткий бриф и получите стартовую основу бренда или карточки товара: логотип, палитру, обложку и направление.">
+  <meta name="theme-color" content="#111111">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/app.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="BaseOf home">
+        <span class="brand-mark">BO</span>
+        <span>
+          <span class="brand-name">BaseOf</span>
+          <span class="brand-line">brand kits for marketplace work</span>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Основная навигация">
+        <a href="./index.html">Главная</a>
+        <a class="active" href="./generator.html">Генератор</a>
+        <a href="./services.html">Услуги</a>
+        <a href="./examples.html">Примеры</a>
+        <a href="./pricing.html">Цены</a>
+        <a href="./about.html">О проекте</a>
+      </nav>
+      <a class="header-cta" href="./pricing.html">Тариф</a>
+    </header>
+
+    <main>
+      <section class="hero-section page-hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Generator</p>
+          <h1 class="page-title">Собери основу за один проход.</h1>
+          <p class="page-copy">
+            Введи название, нишу, стиль и ограничения. BaseOf создаст мокап логотипа, палитру, обложку и текстовую основу для услуги или карточки товара.
+          </p>
+        </div>
+        <div class="hero-visual">
+          <div class="listing-preview">
+            <div class="preview-top">
+              <span>Local MVP</span>
+              <strong>SVG/PNG export</strong>
+            </div>
+            <div class="product-scene">
+              <div class="product-box"><span>BO</span></div>
+              <div class="product-badge">palette</div>
+              <div class="product-chip">cover</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="workspace-grid" id="workspace">
+        <form class="glass-panel builder-card" id="generatorForm">
+          <div class="panel-head">
+            <div>
+              <div class="panel-kicker">Бриф</div>
+              <h2>Собрать основу</h2>
+            </div>
+            <span class="status-pill">1-й запуск = Pro</span>
+          </div>
+
+          <label class="field">
+            <span>Название проекта</span>
+            <input type="text" id="bizName" placeholder="Nord Pack, White Leaf, Market Hero" required>
+          </label>
+
+          <div class="field-grid">
+            <label class="field">
+              <span>Стиль</span>
+              <select id="style" required>
+                <option value="Минималистичный и чистый">Минималистичный и чистый</option>
+                <option value="Плотный и продающий">Плотный и продающий</option>
+                <option value="Премиальный и спокойный">Премиальный и спокойный</option>
+                <option value="Технологичный и точный">Технологичный и точный</option>
+                <option value="Мягкий и дружелюбный">Мягкий и дружелюбный</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span>Категория</span>
+              <select id="niche">
+                <option value="Marketplace card">Карточка товара</option>
+                <option value="Wildberries/Ozon">Wildberries / Ozon</option>
+                <option value="Amazon listing">Amazon listing</option>
+                <option value="Freelance design">Фриланс / дизайн</option>
+                <option value="Creative studio">Креативная студия</option>
+                <option value="Online store">Интернет-магазин</option>
+                <option value="Education">Образование</option>
+                <option value="Tech service">Тех-сервис</option>
+                <option value="Other">Другое</option>
+              </select>
+            </label>
+          </div>
+
+          <label class="field">
+            <span>Своя стилистическая заметка</span>
+            <input type="text" id="customStyle" placeholder="Например: premium tech, clean marketplace, glossy minimal">
+          </label>
+
+          <label class="field">
+            <span>Описание</span>
+            <textarea id="bizDesc" placeholder="Коротко: что за товар или услуга, для кого, какой эффект должен быть у первого экрана."></textarea>
+          </label>
+
+          <label class="field">
+            <span>Цвета или ограничения</span>
+            <input type="text" id="bizColors" placeholder="красный и белый, без черного, акцент #2f7d8c">
+          </label>
+
+          <div class="toggle-row">
+            <label class="toggle-line">
+              <input type="checkbox" id="includeSlogan" checked>
+              <span>Добавить слоган</span>
+            </label>
+            <label class="toggle-line">
+              <input type="checkbox" id="includeExtras" checked>
+              <span>Добавить доп. направления</span>
+            </label>
+          </div>
+
+          <div class="action-stack">
+            <button type="submit" class="solid-button wide" id="generateButton">Сгенерировать основу</button>
+            <p class="helper-note">Это статический MVP: генерация идет локально в браузере. Реальные аккаунты, база, Stripe и AI API подключаются на следующем backend-этапе.</p>
+          </div>
+        </form>
+
+        <section class="glass-panel results-card">
+          <div class="panel-head">
+            <div>
+              <div class="panel-kicker">Результат</div>
+              <h2>Живой предпросмотр</h2>
+            </div>
+            <div class="result-actions">
+              <button class="glass-button small" id="variationButton" disabled>Новый вариант</button>
+              <button class="glass-button small" id="saveProjectButton" disabled>Сохранить</button>
+            </div>
+          </div>
+          <p class="result-status" id="resultStatus">Пока пусто. Заполни бриф, и здесь появятся логотип, палитра и обложка.</p>
+          <div class="results-body" id="resultsBody">
+            <div class="empty-state">
+              <div class="empty-mark">BO</div>
+              <p>Сюда встанет основной результат BaseOf.</p>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <strong>BaseOf</strong>
+        <p>Fast brand foundations for freelance offers and marketplace listings.</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <a href="./index.html">Главная</a>
+        <a href="./services.html">Услуги</a>
+        <a href="./pricing.html">Цены</a>
+      </nav>
+    </div>
+    <div class="creator-strip">Developed by Krendelbok</div>
+  </footer>
+
+  <div class="modal-backdrop hidden" id="authModal">
+    <div class="auth-modal" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+      <button class="modal-close" id="closeAuthModal" aria-label="Close">x</button>
+      <div class="auth-mode-switch">
+        <button class="mode-button active" data-auth-mode="signup">Создать</button>
+        <button class="mode-button" data-auth-mode="login">Войти</button>
+      </div>
+      <h3 id="authTitle">Создать аккаунт BaseOf</h3>
+      <p class="auth-copy">Пока это локальный MVP-режим. В следующем слое сюда подключается нормальная авторизация через backend.</p>
+      <form id="authForm" class="auth-form">
+        <label class="field">
+          <span>Email</span>
+          <input type="email" id="authEmail" placeholder="you@example.com" required>
+        </label>
+        <label class="field">
+          <span>Пароль</span>
+          <input type="password" id="authPassword" placeholder="Минимум 6 символов" required minlength="6">
+        </label>
+        <button type="submit" class="solid-button wide" id="authSubmitButton">Создать аккаунт</button>
+        <p class="auth-note" id="authNote">Данные сохраняются локально в этом MVP-проекте.</p>
+      </form>
+    </div>
+  </div>
+
+  <template id="resultTemplate">
+    <div class="result-layout">
+      <div class="result-main">
+        <section class="result-panel">
+          <div class="result-panel-head">
+            <span>Логотип</span>
+            <div class="inline-actions">
+              <button class="glass-button small" data-export-logo="svg">SVG</button>
+              <button class="glass-button small" data-export-logo="png">PNG</button>
+            </div>
+          </div>
+          <div class="logo-preview-wrap">
+            <div id="logoPreviewMount"></div>
+          </div>
+        </section>
+
+        <section class="result-panel">
+          <div class="result-panel-head">
+            <span>Обложка</span>
+            <div class="inline-actions">
+              <button class="glass-button small" data-export-cover="svg">SVG</button>
+            </div>
+          </div>
+          <div class="cover-preview" id="coverPreviewMount"></div>
+        </section>
+      </div>
+
+      <aside class="result-sidebar">
+        <section class="result-panel">
+          <div class="result-panel-head">
+            <span>Палитра</span>
+          </div>
+          <div class="palette-list" id="paletteMount"></div>
+        </section>
+
+        <section class="result-panel">
+          <div class="result-panel-head">
+            <span>Текстовая основа</span>
+          </div>
+          <div class="foundation-copy">
+            <div class="copy-block">
+              <strong>Слоган</strong>
+              <p id="sloganMount"></p>
+            </div>
+            <div class="copy-block">
+              <strong>Направление</strong>
+              <p id="directionMount"></p>
+            </div>
+            <div class="copy-block">
+              <strong>Что ещё можно сделать</strong>
+              <ul id="extrasMount"></ul>
+            </div>
+          </div>
+        </section>
+      </aside>
+    </div>
+  </template>
+
+  <script src="./assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BaseOf — Бренд-основа за один проход</title>
+  <meta name="description" content="BaseOf превращает короткое описание бизнеса в логотип-концепт, палитру и обложку.">
+  <meta name="theme-color" content="#519aaa">
+  <meta property="og:title" content="BaseOf — Бренд-основа за один проход">
+  <meta property="og:description" content="Логотип, палитра и обложка для фрилансеров и небольших проектов.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="BaseOf">
+  <meta property="og:url" content="https://baseof.vercel.app">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/app.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a href="#workspace" class="brand" aria-label="BaseOf home">
+        <span class="brand-main">BaseOf</span>
+        <span class="brand-sub">brand foundation</span>
+      </a>
+      <div class="topbar-center">
+        <span class="status-pill">baseof.vercel.app</span>
+        <span class="status-pill muted">Pro $1.99</span>
+      </div>
+      <div class="topbar-actions">
+        <button class="glass-button" data-open-auth="login">Войти</button>
+        <button class="solid-button" data-open-auth="signup">Создать аккаунт</button>
+      </div>
+    </header>
+
+    <main class="main-layout">
+      <section class="intro-band" id="workspace">
+        <div class="intro-copy">
+          <div class="mini-label">Soft glass interface</div>
+          <h1 class="display-title">BaseOf собирает логотип, палитру и обложку из одного короткого брифа.</h1>
+          <p class="display-copy">
+            Интерфейс специально упрощён: сначала полезный результат, потом уже подписка, история и экспорт.
+            Первый проект открывает всё ядро Pro, а дальше можно продолжать в платном режиме.
+          </p>
+        </div>
+
+        <aside class="intro-rail">
+          <div class="glass-panel compact">
+            <div class="rail-label">Что уже готово</div>
+            <ul class="rail-list">
+              <li>первый полный бесплатный проект</li>
+              <li>логотип в SVG и PNG</li>
+              <li>обложка под соцсети</li>
+              <li>цвета из названия и описания</li>
+            </ul>
+          </div>
+          <div class="glass-panel compact">
+            <div class="rail-label">Домены</div>
+            <p class="rail-copy">Preview-домен у Vercel будет вида `*.vercel.app`. Для кастомного домена я уже подготовил отдельную инструкцию внутри проекта.</p>
+          </div>
+        </aside>
+      </section>
+
+      <section class="workspace-grid">
+        <form class="glass-panel builder-card" id="generatorForm">
+          <div class="panel-head">
+            <div>
+              <div class="panel-kicker">Бриф</div>
+              <h2>Собрать основу бренда</h2>
+            </div>
+            <span class="status-pill strong">1-й запуск = Pro</span>
+          </div>
+
+          <label class="field">
+            <span>Название проекта</span>
+            <input type="text" id="bizName" placeholder="Red White Studio" required>
+          </label>
+
+          <div class="field-grid">
+            <label class="field">
+              <span>Стиль</span>
+              <select id="style" required>
+                <option value="Минималистичный и чистый">Минималистичный и чистый</option>
+                <option value="Плотный и энергичный">Плотный и энергичный</option>
+                <option value="Премиальный и спокойный">Премиальный и спокойный</option>
+                <option value="Технологичный и точный">Технологичный и точный</option>
+                <option value="Мягкий и дружелюбный">Мягкий и дружелюбный</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span>Категория</span>
+              <select id="niche">
+                <option value="Freelance design">Фриланс / дизайн</option>
+                <option value="Creative studio">Креативная студия</option>
+                <option value="Fitness coach">Фитнес / тренер</option>
+                <option value="Coffee shop">Кофе / еда</option>
+                <option value="Online store">Интернет-магазин</option>
+                <option value="Education">Образование</option>
+                <option value="Tech service">Тех-сервис</option>
+                <option value="Other">Другое</option>
+              </select>
+            </label>
+          </div>
+
+          <label class="field">
+            <span>Своя стилистическая заметка</span>
+            <input type="text" id="customStyle" placeholder="Например: жидкое стекло, мягкий luxury-tech, glossy minimal">
+          </label>
+
+          <label class="field">
+            <span>Описание</span>
+            <textarea id="bizDesc" placeholder="Коротко: что за бизнес, для кого он, какое ощущение должен давать бренд."></textarea>
+          </label>
+
+          <label class="field">
+            <span>Цвета или ограничения</span>
+            <input type="text" id="bizColors" placeholder="красный и белый, без черного, акцент #519aaa">
+          </label>
+
+          <div class="toggle-row">
+            <label class="toggle-line">
+              <input type="checkbox" id="includeSlogan" checked>
+              <span>Добавить слоган</span>
+            </label>
+            <label class="toggle-line">
+              <input type="checkbox" id="includeExtras" checked>
+              <span>Добавить доп. направления</span>
+            </label>
+          </div>
+
+          <div class="action-stack">
+            <button type="submit" class="solid-button wide" id="generateButton">Сгенерировать основу</button>
+            <p class="helper-note">После первого проекта продолжаем в `Pro` за `$1.99/мес`. Внутри Pro доступны 2 дополнительных варианта в день.</p>
+          </div>
+        </form>
+
+        <section class="glass-panel results-card">
+          <div class="panel-head">
+            <div>
+              <div class="panel-kicker">Результат</div>
+              <h2>Живой предпросмотр</h2>
+            </div>
+            <div class="result-actions">
+              <button class="glass-button small" id="variationButton" disabled>Новый вариант</button>
+              <button class="glass-button small" id="saveProjectButton" disabled>Сохранить</button>
+            </div>
+          </div>
+          <p class="result-status" id="resultStatus">Пока пусто. Заполни бриф, и здесь появятся логотип, палитра и обложка.</p>
+          <div class="results-body" id="resultsBody">
+            <div class="empty-state">
+              <div class="empty-mark">BO</div>
+              <p>Сюда встанет основной результат BaseOf.</p>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="support-grid">
+        <article class="glass-panel info-card">
+          <div class="panel-kicker">Основа продукта</div>
+          <h3>Что пользователь получает сразу</h3>
+          <p>Логотип-концепт, палитру, обложку и короткое визуальное направление. Ничего лишнего на первом экране.</p>
+        </article>
+
+        <article class="glass-panel info-card">
+          <div class="panel-kicker">Подписка</div>
+          <h3>Один понятный тариф</h3>
+          <p>Оставлен только `Pro` за `$1.99`. Первый бесплатный проект показывает весь базовый результат без урезания.</p>
+        </article>
+
+        <article class="glass-panel info-card">
+          <div class="panel-kicker">Деплой</div>
+          <h3>Vercel-ready</h3>
+          <p>Я добавил конфиг и отдельную инструкцию по `vercel.app`, а также по кастомным доменам `.org` и `.net`.</p>
+        </article>
+      </section>
+
+      <section class="support-grid faq-grid">
+        <article class="glass-panel info-card">
+          <div class="panel-kicker">FAQ</div>
+          <h3>Если в названии есть цвет</h3>
+          <p>Цвет не вбивается насильно. Он становится сильной подсказкой, а система достраивает палитру вокруг него.</p>
+        </article>
+
+        <article class="glass-panel info-card">
+          <div class="panel-kicker">FAQ</div>
+          <h3>Если цвета слабые</h3>
+          <p>BaseOf оставляет указанные оттенки в предложении, но показывает более устойчивую связку рядом.</p>
+        </article>
+
+        <article class="glass-panel info-card">
+          <div class="panel-kicker">FAQ</div>
+          <h3>Что дальше</h3>
+          <p>Следующий слой после этого интерфейса: реальный auth, Stripe и генерация через OpenAI вместо локального мокапа.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <div class="footer-brand">BaseOf</div>
+        <p>Quiet glass interface for fast brand foundations.</p>
+      </div>
+      <div class="footer-links">
+        <a href="./DEPLOY-BASEOF.md">Инструкция по Vercel</a>
+        <button class="footer-button" data-open-auth="signup">Аккаунт</button>
+      </div>
+    </footer>
+  </div>
+
+  <div class="modal-backdrop hidden" id="authModal">
+    <div class="auth-modal" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+      <button class="modal-close" id="closeAuthModal" aria-label="Close">x</button>
+      <div class="auth-mode-switch">
+        <button class="mode-button active" data-auth-mode="signup">Создать</button>
+        <button class="mode-button" data-auth-mode="login">Войти</button>
+      </div>
+      <h3 id="authTitle">Создать аккаунт BaseOf</h3>
+      <p class="auth-copy">Пока это локальный MVP-режим. В следующем слое сюда подключается нормальная авторизация через backend.</p>
+      <form id="authForm" class="auth-form">
+        <label class="field">
+          <span>Email</span>
+          <input type="email" id="authEmail" placeholder="you@example.com" required>
+        </label>
+        <label class="field">
+          <span>Пароль</span>
+          <input type="password" id="authPassword" placeholder="Минимум 6 символов" required minlength="6">
+        </label>
+        <button type="submit" class="solid-button wide" id="authSubmitButton">Создать аккаунт</button>
+        <p class="auth-note" id="authNote">Данные сохраняются локально в этом MVP-проекте.</p>
+      </form>
+    </div>
+  </div>
+
+  <template id="resultTemplate">
+    <div class="result-layout">
+      <div class="result-main">
+        <section class="result-panel">
+          <div class="result-panel-head">
+            <span>Логотип</span>
+            <div class="inline-actions">
+              <button class="glass-button small" data-export-logo="svg">SVG</button>
+              <button class="glass-button small" data-export-logo="png">PNG</button>
+            </div>
+          </div>
+          <div class="logo-preview-wrap">
+            <div id="logoPreviewMount"></div>
+          </div>
+        </section>
+
+        <section class="result-panel">
+          <div class="result-panel-head">
+            <span>Обложка</span>
+            <div class="inline-actions">
+              <button class="glass-button small" data-export-cover="svg">SVG</button>
+            </div>
+          </div>
+          <div class="cover-preview" id="coverPreviewMount"></div>
+        </section>
+      </div>
+
+      <aside class="result-sidebar">
+        <section class="result-panel">
+          <div class="result-panel-head">
+            <span>Палитра</span>
+          </div>
+          <div class="palette-list" id="paletteMount"></div>
+        </section>
+
+        <section class="result-panel">
+          <div class="result-panel-head">
+            <span>Текстовая основа</span>
+          </div>
+          <div class="foundation-copy">
+            <div class="copy-block">
+              <strong>Слоган</strong>
+              <p id="sloganMount"></p>
+            </div>
+            <div class="copy-block">
+              <strong>Направление</strong>
+              <p id="directionMount"></p>
+            </div>
+            <div class="copy-block">
+              <strong>Что ещё можно сделать</strong>
+              <ul id="extrasMount"></ul>
+            </div>
+          </div>
+        </section>
+      </aside>
+    </div>
+  </template>
+
+  <script src="./assets/app.js"></script>
+</body>
+</html>
