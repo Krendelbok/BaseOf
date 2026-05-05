@@ -164,5 +164,32 @@
   </footer>
 
   <script src="./assets/app.js"></script>
+<div>
+  <input id="title" placeholder="Название проекта">
+  <input id="desc" placeholder="Описание проекта">
+  <button onclick="generate()">Сгенерировать</button>
+</div>
+
+<div id="result"></div>
+
+<script>
+async function generate() {
+  const title = document.getElementById("title").value;
+  const description = document.getElementById("desc").value;
+
+  const res = await fetch('/api/ai', {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ title, description })
+  });
+
+  const data = await res.json();
+
+  document.getElementById("result").innerText = data.result;
+}
+</script>
+
 </body>
 </html>
