@@ -28,3 +28,4 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+I love Luz but she don´t love me...
