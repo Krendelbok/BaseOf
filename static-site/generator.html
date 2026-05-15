@@ -28,9 +28,10 @@
         <a href="./services.html">Услуги</a>
         <a href="./examples.html">Примеры</a>
         <a href="./pricing.html">Цены</a>
+        <a href="./account.html" data-account-link>Регистрация</a>
         <a href="./about.html">О проекте</a>
       </nav>
-      <a class="header-cta" href="./pricing.html">Тариф</a>
+      <a class="header-cta" href="./account.html" data-account-link>Регистрация</a>
     </header>
 
     <main>
@@ -39,13 +40,13 @@
           <p class="eyebrow">Generator</p>
           <h1 class="page-title">Собери основу за один проход.</h1>
           <p class="page-copy">
-            Введи название, нишу, стиль и ограничения. BaseOf создаст мокап логотипа, палитру, обложку и текстовую основу для услуги или карточки товара.
+            Введи название, нишу, стиль и ограничения. BaseOf создаст AI-логотип, палитру, обложку и текстовую основу для услуги или карточки товара.
           </p>
         </div>
         <div class="hero-visual">
           <div class="listing-preview">
             <div class="preview-top">
-              <span>Local MVP</span>
+              <span>Brand kit</span>
               <strong>SVG/PNG export</strong>
             </div>
             <div class="product-scene">
@@ -127,8 +128,8 @@
           </div>
 
           <div class="action-stack">
-            <button type="submit" class="solid-button wide" id="generateButton">Сгенерировать основу</button>
-            <p class="helper-note">Это статический MVP: генерация идет локально в браузере. Реальные аккаунты, база, Stripe и AI API подключаются на следующем backend-этапе.</p>
+            <button type="submit" class="solid-button wide" id="generateButton">Сгенерировать AI-основу</button>
+            <p class="helper-note">Собери первый набор, сохрани его в аккаунте и скачай файлы для дальнейшей работы. AI-логотип создается через Groq, а локальный вариант остается резервом.</p>
           </div>
         </form>
 
@@ -151,6 +152,46 @@
             </div>
           </div>
         </section>
+      </section>
+
+      <section class="section-band muted-band idea-lab">
+        <div class="section-head">
+          <p class="eyebrow">AI ideas</p>
+          <h2>Нестандартные идеи для генератора</h2>
+          <p>Что может выделить BaseOf среди обычных генераторов</p>
+        </div>
+        <div class="idea-grid">
+          <article class="idea-card">
+            <span class="tag">01</span>
+            <h3>Marketplace scan score</h3>
+            <p>Оценка читаемости первого слайда: виден ли товар, выгода, бренд и главный акцент за 3 секунды.</p>
+          </article>
+          <article class="idea-card">
+            <span class="tag">02</span>
+            <h3>AI taste mode</h3>
+            <p>Переключатель вкуса: спокойный премиум, агрессивная продажа, clean Amazon, яркий WB/Ozon.</p>
+          </article>
+          <article class="idea-card">
+            <span class="tag">03</span>
+            <h3>Competitor contrast</h3>
+            <p>Подсказки, как визуально отличиться от соседних карточек без грязного дизайна.</p>
+          </article>
+          <article class="idea-card">
+            <span class="tag">04</span>
+            <h3>Packshot prompt</h3>
+            <p>Готовый промпт для будущего рендера товара: фон, свет, ракурс, материалы и настроение.</p>
+          </article>
+          <article class="idea-card">
+            <span class="tag">05</span>
+            <h3>Platform presets</h3>
+            <p>Отдельные режимы под Amazon, Wildberries, Ozon и фриланс-портфолио.</p>
+          </article>
+          <article class="idea-card">
+            <span class="tag">06</span>
+            <h3>Before/after slide</h3>
+            <p>Идея слайда, где товар показывается через проблему до покупки и результат после.</p>
+          </article>
+        </div>
       </section>
     </main>
   </div>
@@ -178,7 +219,7 @@
         <button class="mode-button" data-auth-mode="login">Войти</button>
       </div>
       <h3 id="authTitle">Создать аккаунт BaseOf</h3>
-      <p class="auth-copy">Пока это локальный MVP-режим. В следующем слое сюда подключается нормальная авторизация через backend.</p>
+      <p class="auth-copy">Аккаунт нужен, чтобы сохранять проекты и быстро возвращаться к результатам.</p>
       <form id="authForm" class="auth-form">
         <label class="field">
           <span>Email</span>
@@ -189,7 +230,7 @@
           <input type="password" id="authPassword" placeholder="Минимум 6 символов" required minlength="6">
         </label>
         <button type="submit" class="solid-button wide" id="authSubmitButton">Создать аккаунт</button>
-        <p class="auth-note" id="authNote">Данные сохраняются локально в этом MVP-проекте.</p>
+        <p class="auth-note" id="authNote">После регистрации можно сохранить текущий проект.</p>
       </form>
     </div>
   </div>
@@ -208,6 +249,7 @@
           <div class="logo-preview-wrap">
             <div id="logoPreviewMount"></div>
           </div>
+          <p class="logo-source-note" id="logoSourceMount"></p>
         </section>
 
         <section class="result-panel">

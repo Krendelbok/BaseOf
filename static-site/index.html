@@ -33,9 +33,10 @@
         <a href="./services.html">Услуги</a>
         <a href="./examples.html">Примеры</a>
         <a href="./pricing.html">Цены</a>
+        <a href="./account.html" data-account-link>Регистрация</a>
         <a href="./about.html">О проекте</a>
       </nav>
-      <a class="header-cta" href="./generator.html">Начать бриф</a>
+      <a class="header-cta" href="./account.html" data-account-link>Регистрация</a>
     </header>
 
     <main>
@@ -135,15 +136,15 @@
             BaseOf не обещает магическую кнопку продаж. Его задача проще и полезнее: быстро дать визуальную систему, которую можно превратить в первый экран карточки, инфографику преимуществ, обложку набора и промо-баннер.
           </p>
           <p>
-            В текстах и примерах я добавил фокус на Amazon, Wildberries и Ozon, чтобы посетитель сразу понял, что продукт подходит не только для логотипов, но и для реальной упаковки товаров.
+            Формат подходит не только для логотипов, но и для реальной упаковки товаров: от первого слайда до набора визуальных подсказок для дизайнера.
           </p>
         </div>
       </section>
 
       <section class="cta-band">
-        <p class="eyebrow">Launch-ready MVP</p>
-        <h2>Можно показать друзьям, первым клиентам или залить на Vercel как статический сайт.</h2>
-        <a class="button primary dark" href="./pricing.html">Что входит в запуск</a>
+        <p class="eyebrow">Start kit</p>
+        <h2>Собери основу под товар, услугу или магазин и сразу забери материалы для дальнейшей работы.</h2>
+        <a class="button primary dark" href="./generator.html">Собрать проект</a>
       </section>
     </main>
   </div>
@@ -164,32 +165,5 @@
   </footer>
 
   <script src="./assets/app.js"></script>
-<div>
-  <input id="title" placeholder="Название проекта">
-  <input id="desc" placeholder="Описание проекта">
-  <button onclick="generate()">Сгенерировать</button>
-</div>
-
-<div id="result"></div>
-
-<script>
-async function generate() {
-  const title = document.getElementById("title").value;
-  const description = document.getElementById("desc").value;
-
-  const res = await fetch('/api/ai', {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({ title, description })
-  });
-
-  const data = await res.json();
-
-  document.getElementById("result").innerText = data.result;
-}
-</script>
-
 </body>
 </html>

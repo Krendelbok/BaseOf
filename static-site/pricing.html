@@ -28,9 +28,10 @@
         <a href="./services.html">Услуги</a>
         <a href="./examples.html">Примеры</a>
         <a class="active" href="./pricing.html">Цены</a>
+        <a href="./account.html" data-account-link>Регистрация</a>
         <a href="./about.html">О проекте</a>
       </nav>
-      <a class="header-cta" href="./generator.html">Начать бриф</a>
+      <a class="header-cta" href="./account.html" data-account-link>Регистрация</a>
     </header>
 
     <main>
@@ -39,7 +40,7 @@
           <p class="eyebrow">Pricing</p>
           <h1 class="page-title">Один понятный запуск без лишней витрины.</h1>
           <p class="page-copy">
-            Сейчас это статический MVP, поэтому оплата не подключена. Но страница уже объясняет будущую модель, чтобы проект выглядел готовым к первому публичному тесту.
+            Первый проект помогает проверить направление, а Pro подходит для тех, кто регулярно собирает визуальные основы для услуг, магазинов и карточек товаров.
           </p>
         </div>
       </section>
@@ -62,25 +63,44 @@
             <span class="tag">Pro</span>
             <h3>Pro</h3>
             <div class="price">$1.99</div>
-            <p>Будущий тариф для дополнительных вариантов и сохранения истории.</p>
+            <p>Тариф для дополнительных вариантов и сохранения истории.</p>
             <ul class="feature-list">
               <li>2 дополнительных варианта в день</li>
               <li>Сохранение проектов в аккаунте</li>
               <li>Больше шаблонов под маркетплейсы</li>
-              <li>Подключение Stripe на backend-этапе</li>
+              <li>Удобная история бренд-наборов</li>
             </ul>
           </article>
         </div>
       </section>
 
+      <section class="section-band payment-section" id="payment">
+        <div class="payment-card">
+          <div>
+            <p class="eyebrow">DonationAlerts</p>
+            <h2>Временная оплата подписки</h2>
+            <p class="payment-lead">
+              ВНИМАНИЕ! Это временный способ оплаты для покупки подписки. Любой донат = подписка, но вы должны указать либо свой ник профиля на сайте, либо свои контактные данные Telegram.
+            </p>
+            <p>
+              Минимальный донат уже выставлен на 2$ в любых валютах. Заранее спасибо за поддержку!
+            </p>
+            <p>
+              Сейчас подписка включается вручную после доната. В сообщении DonationAlerts обязательно напиши ник профиля BaseOf или Telegram, чтобы платеж можно было связать с аккаунтом.
+            </p>
+          </div>
+          <a class="button primary dark" href="https://www.donationalerts.com/r/baseof" target="_blank" rel="noopener">Перейти к оплате</a>
+        </div>
+      </section>
+
       <section class="section-band muted-band split-band">
         <div>
-          <p class="eyebrow">Important</p>
-          <h2>Что честно указано перед запуском</h2>
+          <p class="eyebrow">For work</p>
+          <h2>Когда нужен Pro</h2>
         </div>
         <div class="text-column">
-          <p>Сейчас аккаунты и сохранение работают локально в браузере. Это нормально для MVP, но не для настоящей оплаты и пользовательской истории.</p>
-          <p>После публикации на Vercel следующий этап — Next.js, Supabase, Stripe и реальная AI-генерация через API.</p>
+          <p>Pro имеет смысл, если ты делаешь карточки товаров партиями, тестируешь несколько визуальных направлений или готовишь разные варианты для клиента.</p>
+          <p>Бесплатный старт остается для первого проекта, чтобы спокойно понять формат и качество результата.</p>
         </div>
       </section>
     </main>

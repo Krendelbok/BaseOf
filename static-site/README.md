@@ -1,12 +1,12 @@
 # BaseOf Static Site
 
-Deploy root:
+Project folder:
 
 ```text
-/Users/matt/Desktop/Новая папка с объектами/BASEOF-COLLECTED/static-site
+/Users/matt/Downloads/Новая папка с объектами/BASEOF-COLLECTED/static-site
 ```
 
-This is a static MVP for Vercel. It does not need a build command.
+This folder contains the current public website files.
 
 ## Pages
 
@@ -14,9 +14,11 @@ This is a static MVP for Vercel. It does not need a build command.
 - `generator.html` — local brand/card generator
 - `services.html` — use cases for freelancers and marketplaces
 - `examples.html` — example outputs
-- `pricing.html` — launch pricing model
-- `about.html` — project state and roadmap
+- `pricing.html` — pricing model
+- `account.html` — registration, login, saved projects
+- `about.html` — project positioning
 - `404.html` — custom not found page
+- `api/logo.js` — Vercel Function for AI SVG logos through Groq
 
 ## Vercel Settings
 
@@ -27,3 +29,22 @@ This is a static MVP for Vercel. It does not need a build command.
 - Install command: leave empty
 
 If you upload only this folder, the root directory is just the uploaded folder.
+
+## Environment Variables
+
+Add these in Vercel Project Settings -> Environment Variables:
+
+- `GROQ_API_KEY` — required for AI logo generation
+- `GROQ_MODEL` — optional, defaults to `llama-3.3-70b-versatile`
+
+Without `GROQ_API_KEY`, the generator still works and shows a local backup logo.
+
+## Temporary Payment
+
+Subscription payment currently uses DonationAlerts:
+
+```text
+https://www.donationalerts.com/r/baseof
+```
+
+Important: any donation from $2 counts as a subscription, but the buyer must include their BaseOf profile nickname or Telegram contact in the donation message so the subscription can be connected to the account manually.

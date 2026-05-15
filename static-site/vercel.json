@@ -2,6 +2,11 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
   "trailingSlash": false,
+  "functions": {
+    "api/logo.js": {
+      "maxDuration": 20
+    }
+  },
   "redirects": [
     {
       "source": "/baseof",

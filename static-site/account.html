@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Аккаунт BaseOf — регистрация и вход</title>
+  <meta name="description" content="Создайте аккаунт BaseOf, чтобы сохранять бренд-наборы, карточки товаров и визуальные направления.">
+  <meta name="theme-color" content="#111111">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/app.css">
+</head>
+<body>
+  <div class="site-shell" id="accountPage">
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="BaseOf home">
+        <span class="brand-mark">BO</span>
+        <span>
+          <span class="brand-name">BaseOf</span>
+          <span class="brand-line">brand kits for marketplace work</span>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Основная навигация">
+        <a href="./index.html">Главная</a>
+        <a href="./generator.html">Генератор</a>
+        <a href="./services.html">Услуги</a>
+        <a href="./examples.html">Примеры</a>
+        <a href="./pricing.html">Цены</a>
+        <a class="active" href="./account.html" data-account-link>Регистрация</a>
+        <a href="./about.html">О проекте</a>
+      </nav>
+      <a class="header-cta" href="./generator.html">Начать бриф</a>
+    </header>
+
+    <main>
+      <section class="hero-section page-hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Account</p>
+          <h1 class="page-title">Создай аккаунт и сохраняй свои наборы.</h1>
+          <p class="page-copy">
+            Аккаунт нужен для проектов, палитр и вариантов, к которым удобно возвращаться после генерации.
+          </p>
+        </div>
+        <div class="hero-visual">
+          <div class="listing-preview">
+            <div class="preview-top">
+              <span>BaseOf account</span>
+              <strong>Saved kits</strong>
+            </div>
+            <div class="product-scene">
+              <div class="product-box"><span>BO</span></div>
+              <div class="product-badge">projects</div>
+              <div class="product-chip">history</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-band">
+        <div class="account-payment-note">
+          <div>
+            <p class="eyebrow">Subscription</p>
+            <h2>После доната напиши ник профиля или Telegram</h2>
+            <p>Это временный способ покупки подписки: любой донат от $2 считается оплатой, но без ника или контакта подписку невозможно привязать к аккаунту.</p>
+          </div>
+          <a class="button primary" href="https://www.donationalerts.com/r/baseof" target="_blank" rel="noopener">Открыть DonationAlerts</a>
+        </div>
+
+        <div class="account-grid" id="authPanels">
+          <form class="glass-panel account-card" id="registerForm">
+            <div class="panel-kicker">Регистрация</div>
+            <h2>Новый аккаунт</h2>
+            <label class="field">
+              <span>Имя</span>
+              <input type="text" id="registerName" placeholder="Как к тебе обращаться" autocomplete="name">
+            </label>
+            <label class="field">
+              <span>Email</span>
+              <input type="email" id="registerEmail" placeholder="you@example.com" autocomplete="email" required>
+            </label>
+            <label class="field">
+              <span>Пароль</span>
+              <input type="password" id="registerPassword" placeholder="Минимум 6 символов" autocomplete="new-password" minlength="6" required>
+            </label>
+            <button class="solid-button wide" type="submit">Создать аккаунт</button>
+          </form>
+
+          <form class="glass-panel account-card" id="loginForm">
+            <div class="panel-kicker">Вход</div>
+            <h2>Уже есть аккаунт</h2>
+            <label class="field">
+              <span>Email</span>
+              <input type="email" id="loginEmail" placeholder="you@example.com" autocomplete="email" required>
+            </label>
+            <label class="field">
+              <span>Пароль</span>
+              <input type="password" id="loginPassword" placeholder="Твой пароль" autocomplete="current-password" required>
+            </label>
+            <button class="glass-button wide" type="submit">Войти</button>
+          </form>
+        </div>
+
+        <section class="glass-panel account-profile hidden" id="profilePanel">
+          <div class="panel-head">
+            <div>
+              <div class="panel-kicker">Профиль</div>
+              <h2 id="accountName">Аккаунт</h2>
+            </div>
+            <button class="glass-button" id="logoutButton" type="button">Выйти</button>
+          </div>
+          <div class="profile-stats">
+            <article>
+              <span>Email</span>
+              <strong id="accountEmail"></strong>
+            </article>
+            <article>
+              <span>Тариф</span>
+              <strong id="accountPlan"></strong>
+            </article>
+          </div>
+          <div class="project-list-head">
+            <div class="panel-kicker">Сохраненные проекты</div>
+            <a class="button secondary" href="./generator.html">Создать новый</a>
+          </div>
+          <div class="project-list" id="accountProjects"></div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <strong>BaseOf</strong>
+        <p>Fast brand foundations for freelance offers and marketplace listings.</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <a href="./generator.html">Генератор</a>
+        <a href="./services.html">Услуги</a>
+        <a href="./pricing.html">Цены</a>
+      </nav>
+    </div>
+    <div class="creator-strip">Developed by Krendelbok</div>
+  </footer>
+
+  <script src="./assets/app.js"></script>
+</body>
+</html>
